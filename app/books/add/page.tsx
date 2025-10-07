@@ -141,20 +141,6 @@ export default function AddBookPage() {
                     />
                   ) : (
                     <div className="text-gray-500 flex flex-col items-center">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-12 w-12 mb-2"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l-1.586-1.586a2 2 0 00-2.828 0L6 14m6-6l.01.01"
-                        />
-                      </svg>
                       <span className="text-center">Preview da Imagem</span>
                     </div>
                   )}
@@ -236,17 +222,14 @@ export default function AddBookPage() {
                     >
                       <span className="text-sm text-gray-700">
                         {selectedGenres.length > 0
-                          ? `${selectedGenres.length} ${
-                              selectedGenres.length === 1 ? "gênero" : "gêneros"
-                            } selecionado${
-                              selectedGenres.length === 1 ? "" : "s"
-                            }`
+                          ? `${selectedGenres.length} ${selectedGenres.length === 1 ? "gênero" : "gêneros"
+                          } selecionado${selectedGenres.length === 1 ? "" : "s"
+                          }`
                           : "Selecione os gêneros"}
                       </span>
                       <svg
-                        className={`w-5 h-5 text-gray-500 transition-transform ${
-                          isGenresOpen ? "rotate-180" : ""
-                        }`}
+                        className={`w-5 h-5 text-gray-500 transition-transform ${isGenresOpen ? "rotate-180" : ""
+                          }`}
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -302,18 +285,16 @@ export default function AddBookPage() {
                               <div
                                 key={genre.id}
                                 onClick={() => handleGenreChange(genre.id)}
-                                className={`flex items-center gap-2 p-2 rounded cursor-pointer ${
-                                  selectedGenres.includes(genre.id)
+                                className={`flex items-center gap-2 p-2 rounded cursor-pointer ${selectedGenres.includes(genre.id)
                                     ? "bg-blue-50 text-blue-700"
                                     : "hover:bg-gray-50"
-                                }`}
+                                  }`}
                               >
                                 <div
-                                  className={`w-4 h-4 rounded border flex items-center justify-center ${
-                                    selectedGenres.includes(genre.id)
+                                  className={`w-4 h-4 rounded border flex items-center justify-center ${selectedGenres.includes(genre.id)
                                       ? "bg-blue-500 border-blue-500"
                                       : "border-gray-300"
-                                  }`}
+                                    }`}
                                 >
                                   {selectedGenres.includes(genre.id) && (
                                     <svg
