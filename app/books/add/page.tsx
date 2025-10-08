@@ -118,7 +118,7 @@ export default function AddBookPage() {
       <Card className="overflow-hidden">
         <CardHeader>
           <CardTitle className="text-2xl font-bold text-gray-800">
-            Adicionar um Novo Livro à Sua Estante
+            Adicionar um novo Livro na biblioteca pessoal
           </CardTitle>
         </CardHeader>
         <CardContent className="p-8">
@@ -462,7 +462,7 @@ export default function AddBookPage() {
             <div className="flex justify-end mt-12">
               <Button
                 type="submit"
-                className="px-8 py-4 text-lg font-bold"
+                className="px-8 py-4 text-lg font-bold bg-purple-900 hover:bg-purple-700"
                 disabled={isSubmitting}
               >
                 {isSubmitting ? "Adicionando..." : "Adicionar Livro"}
